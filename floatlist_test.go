@@ -12,6 +12,10 @@ func TestFloatList(t *testing.T) {
 			So(list.Mean(), ShouldEqual, 16.0/7.0)
 		})
 
+		Convey("sum", func() {
+			So(list.Sum(), ShouldEqual, 16.0)
+		})
+
 		Convey("median", func() {
 			So(list.Median(), ShouldEqual, 2.0)
 		})

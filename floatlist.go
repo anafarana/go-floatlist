@@ -8,12 +8,16 @@ type Floatlist []float64
 
 func (list Floatlist) Mean() float64 {
 	length := float64(len(list))
+	total := list.Sum()
+	return total / length
+}
+
+func (list Floatlist) Sum() float64 {
 	total := 0.0
 	for _, f := range list {
 		total += f
 	}
-
-	return total / length
+	return total
 }
 
 func (list Floatlist) Median() float64 {
